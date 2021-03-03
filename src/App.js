@@ -3,6 +3,8 @@ import Hero from './components/errorBoundries/Hero';
 import ErrorBoundry from './components/errorBoundries/ErrorBoundry';
 import PortalDemo from './components/portals/PortalDemo';
 import FRParentInput from './components/refs/FRParentInput';
+import ClickCounter from './components/hoc/ClickCounter';
+import HoverCounter from './components/hoc/HoverCounter';
 
 // import ParentPureComp from './components/pureComponents/ParentPureComp';
 // import FocusInput from './components/refs/FocusInput';
@@ -98,8 +100,10 @@ function App() {
 			<ErrorBoundry>
 				<Hero heroName='joker' />
 			</ErrorBoundry>
-			 */}
 			<FRParentInput />
+			 */}
+			<ClickCounter />
+			<HoverCounter />
 		</div>
 	);
 }

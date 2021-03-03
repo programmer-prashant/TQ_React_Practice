@@ -42,15 +42,12 @@ class FormDemo extends Component {
 					/>
 				</div>
 				<div>
-					<label htmlFor=''>Comments : </label>
-					<textarea
-						name=''
-						id=''
-						cols='30'
-						rows='10'
+					<label htmlFor=''>Enter your age : </label>
+					<input
+						type='text'
 						value={this.state.comments}
 						onChange={this.handleCommentsChange}
-					></textarea>
+					></input>
 				</div>
 				<div>
 					<label htmlFor=''>Toptc : </label>
