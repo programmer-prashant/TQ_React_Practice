@@ -1,11 +1,22 @@
 import './App.css';
-import Hero from './components/errorBoundries/Hero';
-import ErrorBoundry from './components/errorBoundries/ErrorBoundry';
-import PortalDemo from './components/portals/PortalDemo';
-import FRParentInput from './components/refs/FRParentInput';
-import ClickCounter from './components/hoc/ClickCounter';
-import HoverCounter from './components/hoc/HoverCounter';
+import UseStateDemo from './hooks/useState/UseStateDemo';
+import HookCounter from './hooks/useState/HookCounter';
+import UseStateDemoTwo from './hooks/useState/UseStateDemoTwo';
+import UseStateDemoThree from './hooks/useState/UseStateDemoThree';
 
+// import Hero from './components/errorBoundries/Hero';
+// import ErrorBoundry from './components/errorBoundries/ErrorBoundry';
+// import PortalDemo from './components/portals/PortalDemo';
+// import FRParentInput from './components/refs/FRParentInput';
+// import ClickCounter from './components/hoc/ClickCounter';
+// import HoverCounter from './components/hoc/HoverCounter';
+// import ClickCounterTwo from './components/render_props/ClickCounterTwo';
+// import HoverCounterTwo from './components/render_props/HoverCounterTwo';
+// import User from './components/render_props/User';
+// import CounterLogic from './components/render_props/CounterLogic';
+// import ComponentA from './components/context/ComponentA';
+// import { UserProvider } from './components/context/UserContex';
+// import GETRequest from './components/http/GETRequest';
 // import ParentPureComp from './components/pureComponents/ParentPureComp';
 // import FocusInput from './components/refs/FocusInput';
 // import RefsDemo from './components/refs/RefsDemo';
@@ -46,7 +57,7 @@ import HoverCounter from './components/hoc/HoverCounter';
 function App() {
 	return (
 		<div className='App'>
-			{/* <div className='App'>
+			{/* 
 			<ClassComp />
 			<FunctionalComp />
 			<CreateElementDemo />
@@ -101,9 +112,34 @@ function App() {
 				<Hero heroName='joker' />
 			</ErrorBoundry>
 			<FRParentInput />
-			 */}
 			<ClickCounter />
 			<HoverCounter />
+			<ClickCounterTwo />
+			<HoverCounterTwo />
+			<User render={(isLoggedIn) => (isLoggedIn ? 'Prashant' : 'Guest')} />
+			<CounterLogic
+				render={(count, incrementCount) => (
+					<ClickCounterTwo count={count} incrementCount={incrementCount} />
+				)}
+			/>
+			<CounterLogic
+				render={(count, incrementCount) => (
+					<HoverCounterTwo count={count} incrementCount={incrementCount} />
+				)}
+			/>
+			<UserProvider value='Prashant'>
+				<ComponentA />
+			</UserProvider>
+			<GETRequest />
+			 */}
+
+			{/* React Hooks
+			
+			<UseStateDemo />
+			<HookCounter />
+			<UseStateDemoTwo />
+			 */}
+			<UseStateDemoThree />
 		</div>
 	);
 }
