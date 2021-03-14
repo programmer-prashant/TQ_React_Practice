@@ -1,3 +1,8 @@
+body {
+	background-color: #ffcccc !important;
+	border-radius: 10px;
+	font-family: 'Raleway', sans-serif;
+}
 .App {
 	text-align: center;
 }

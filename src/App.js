@@ -1,9 +1,28 @@
 import './App.css';
+import React from 'react';
+
+//********************************************* React Hooks *****************************************************/
+import FetchData from './hooks/useEffect/FetchData';
+import UseEffectDemoOne from './hooks/useEffect/UseEffectDemoOne';
+import UseEffectDemoThree from './hooks/useEffect/UseEffectDemoThree';
+import UseEffectDemoTwo from './hooks/useEffect/UseEffectDemoTwo';
 import UseStateDemo from './hooks/useState/UseStateDemo';
 import HookCounter from './hooks/useState/HookCounter';
 import UseStateDemoTwo from './hooks/useState/UseStateDemoTwo';
 import UseStateDemoThree from './hooks/useState/UseStateDemoThree';
+import ConditionalDemo from './hooks/useState/ConditionalDemo';
+import UseRDemo from './hooks/useReducer/UseRDemo';
+import CustomDemo from './hooks/customHook/CustomDemo';
+import UseReducerDemoTwo from './hooks/useReducer/UseReducerDemoTwo';
+import BasicForm from './hooks/useRef/BasicForm';
+import Main from './hooks/useLocation/Main';
 
+//********************************************* React Core Concepts *****************************************************/
+// import CrudExample from './components/curd/CURD';
+// import SingleInputDemo from './components/forms/SingleInputDemo';
+// import ComponentP from './hooks/useContext/ComponentP';
+// export const sendContext = React.createContext();
+// import { UserProvider } from './hooks/useContext/UseContext';
 // import Hero from './components/errorBoundries/Hero';
 // import ErrorBoundry from './components/errorBoundries/ErrorBoundry';
 // import PortalDemo from './components/portals/PortalDemo';
@@ -15,7 +34,6 @@ import UseStateDemoThree from './hooks/useState/UseStateDemoThree';
 // import User from './components/render_props/User';
 // import CounterLogic from './components/render_props/CounterLogic';
 // import ComponentA from './components/context/ComponentA';
-// import { UserProvider } from './components/context/UserContex';
 // import GETRequest from './components/http/GETRequest';
 // import ParentPureComp from './components/pureComponents/ParentPureComp';
 // import FocusInput from './components/refs/FocusInput';
@@ -127,19 +145,36 @@ function App() {
 					<HoverCounterTwo count={count} incrementCount={incrementCount} />
 				)}
 			/>
+			<GETRequest />
+			<CrudExample />
+			<SingleInputDemo />
 			<UserProvider value='Prashant'>
 				<ComponentA />
 			</UserProvider>
-			<GETRequest />
 			 */}
 
-			{/* React Hooks
+			{/* +********************************* React Hooks **********************************************
 			
+			
+			<UseEffectDemoOne />
+			<UseEffectDemoTwo />
+			<UseEffectDemoThree />
+			<FetchData />
+				<sendContext.Provider value={'Prashant'}>
+				<ComponentP />
+			</sendContext.Provider>
 			<UseStateDemo />
 			<HookCounter />
 			<UseStateDemoTwo />
-			 */}
 			<UseStateDemoThree />
+			<FetchData />
+			<UseRDemo />
+			<CustomDemo />
+			<UseReducerDemoTwo />
+			<ConditionalDemo />
+			<BasicForm />
+			 */}
+			<Main />
 		</div>
 	);
 }
