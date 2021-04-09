@@ -1,6 +1,11 @@
 import './App.css';
 import React from 'react';
 
+//************************Redux***********************/
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import PizzaContainer from './components/PizzaContainer';
+
 //********************************************* React Hooks *****************************************************/
 import FetchData from './hooks/useEffect/FetchData';
 import UseEffectDemoOne from './hooks/useEffect/UseEffectDemoOne';
@@ -16,6 +21,9 @@ import CustomDemo from './hooks/customHook/CustomDemo';
 import UseReducerDemoTwo from './hooks/useReducer/UseReducerDemoTwo';
 import BasicForm from './hooks/useRef/BasicForm';
 import Main from './hooks/useLocation/Main';
+import NameList from './hooks/useState/NameList';
+import ReadMoreDemo from './hooks/useState/ReadMoreAndReadLessUseState';
+import ChangeBackground from './hooks/customHook/ChangeBackground';
 
 //********************************************* React Core Concepts *****************************************************/
 // import CrudExample from './components/curd/CURD';
@@ -173,8 +181,18 @@ function App() {
 			<UseReducerDemoTwo />
 			<ConditionalDemo />
 			<BasicForm />
-			 */}
 			<Main />
+			<NameList />
+			<ReadMoreDemo />
+			<ChangeBackground />
+			 */}
+
+			{/* *********Redux********* */}
+			<Provider store={store}>
+				<div className='App'>
+					<PizzaContainer />
+				</div>
+			</Provider>
 		</div>
 	);
 }
